@@ -1,0 +1,42 @@
+/* The site is readable in both Starlight color modes. */
+:root {
+  --sl-color-accent-low: #ddf4ed;
+  --sl-color-accent: #096d58;
+  --sl-color-accent-high: #064d40;
+  --sl-font: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', sans-serif;
+}
+
+:root[data-theme='dark'] {
+  --sl-color-accent-low: #15392f;
+  --sl-color-accent: #7be0b6;
+  --sl-color-accent-high: #c9f7df;
+  --sl-color-bg: #0c1113;
+  --sl-color-bg-nav: #10191b;
+  --sl-color-bg-sidebar: #10191b;
+  --sl-color-hairline: #27383a;
+}
+
+:root[data-theme='dark'] body {
+  background: radial-gradient(ellipse at 80% -20%, #183329 0%, transparent 48%),
+    var(--sl-color-bg);
+}
+
+.sl-markdown-content h2,
+.sl-markdown-content h3 {
+  letter-spacing: -0.025em;
+}
+
+.sl-markdown-content a {
+  text-underline-offset: 0.2em;
+}
+
+/* Built-in Starlight link cards on the homepage. */
+.sl-link-card {
+  border-radius: 0.85rem;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.sl-link-card:hover {
+  transform: translateY(-2px);
+}
